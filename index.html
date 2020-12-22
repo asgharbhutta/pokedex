@@ -13,11 +13,16 @@
         <h5>Pokedex</h5>
         <img src="images/ball.png" class="logo"/>
     </section>
+
     <section id="content">
         <div id="capturedata">
-            <form class="poke-interface">
-                <label for="pokename">Pokemon Name</label>
-                <input type="text" id="pokename">
+            <form id="poke-interface" class="poke-interface">
+                <label for="pokename">Search by Name or ID</label>
+                <br>
+                <input type="text" id="pokename" class="pokenameinputbox">
+                <br>
+                <button type="submit" id="submit" class="pokenameinputboxsubmit">submit</button>
+                
             </form>
         </div>
         <div id="results">
@@ -29,5 +34,7 @@
 
     </footer>
     
+    <script src="js/script.js"></script>
+
 </body>
 </html>
