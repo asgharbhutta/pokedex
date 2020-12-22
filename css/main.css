@@ -121,3 +121,37 @@ table {
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
 }
+
+@media screen and (max-width: 768px){
+    .pokenameinputbox {
+        font-size: 1.3em;
+        margin: 0px;
+        font-family: "IBM Plex Sans", sans-serif;
+    }
+
+    .pokenameinputboxsubmit {
+        font-size: 1.3rem;
+        text-decoration: none;
+        padding: 0px 0px;
+        margin: 10px 0px;
+        border-radius: var(--border-radius);
+        color: var(--primary);
+        border: none;
+        outline: none;
+        background-color: var(--light-dark);
+        box-shadow: 3px 3px var(--dark);
+        transform: translate(-1px, -1px);
+        font-family: "IBM Plex Sans", sans-serif;
+    }
+
+    .poke-interface{
+        font-family: 'Press Start 2P', cursive;
+        padding: 20px;
+        font-size: 0.75em;
+        margin-bottom: 10px;
+    }
+
+    #header{
+        font-size: 2em;
+    }
+}
