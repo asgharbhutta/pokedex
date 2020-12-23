@@ -16,7 +16,7 @@ var getPokeData = function(pokeName){
                 displayPokeData(data, pokeName)
             });
         }else{
-            alert("Error Returned: " + response.statusText);
+            alert("Error Returned: Pokemon not found" + response.statusText);
         }
     })
 };
@@ -25,7 +25,7 @@ var getPokeData = function(pokeName){
 var formSubmitHandler = function(event){
     event.preventDefault();
     //input box you type into
-    let pokeName = document.getElementById("pokename").value;
+    let pokeName = document.getElementById("pokename").value.toLowerCase();
     if(pokeName){
       getPokeData(pokeName)
         
@@ -38,16 +38,25 @@ var formSubmitHandler = function(event){
 }
 
 let displayPokeData = function(data, pokeName){
+    //reset the data displayed
     results.innerText = "";
+
     //get pokemon name
     let name = data.name
+    let nameFormatted = name.charAt(0).toUpperCase() + name.slice(1);
     let nameEl = document.createElement('div');
-    nameEl.classList = 'poke-interface';
-    nameEl.textContent = "Name: " + name;
-    //console.log(name);
+    nameEl.classList = 'poke-interface-render';
+    nameEl.textContent = "Name: " + nameFormatted;
+   
+    //get pokemon image
+    let pokePic = data.sprites.other['official-artwork'].front_default
+    let pokePicEl = document.createElement('img');
+    pokePicEl.classList = 'poke-interface-render';
+    pokePicEl.setAttribute("src", pokePic)
 
 
     results.appendChild(nameEl);
+    results.appendChild(pokePicEl);
 
 }
 
