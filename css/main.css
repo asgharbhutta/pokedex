@@ -164,6 +164,16 @@ table {
         font-size: 16px;
     }
 
+    .poke-interface-render {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 0 auto;
+    }
+
     #header{
         font-size: 2em;
         padding: 15px;
