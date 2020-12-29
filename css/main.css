@@ -80,6 +80,16 @@ table {
 
 #results {
     background-color: darkkhaki;
+    display: flex;
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+}
+
+#picture {
+  
 }
 
 .logo {
@@ -97,7 +107,7 @@ table {
 .poke-interface-render {
     font-family: 'helvetica';
     font-size: 2em;
-    padding: 15px;
+    padding: 0px 10px;
 }
 
 .poketext{
@@ -108,16 +118,15 @@ table {
 .pokenameinputbox {
     width: 100%;
     font-size: 1.3em;
-    margin: 20px 20px;
     font-family: "IBM Plex Sans", sans-serif;
 }
 
 .pokenameinputboxsubmit {
     font-size: 1.3rem;
     text-decoration: none;
-    padding: 6px 5px;
+    padding: 10px;
+    margin: 10px 0;
     width: 100%;
-    margin: 10px 20px;
     border-radius: var(--border-radius);
     color: var(--primary);
     border: none;

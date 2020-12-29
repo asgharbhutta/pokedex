@@ -38,25 +38,35 @@ var formSubmitHandler = function(event){
 }
 
 let displayPokeData = function(data, pokeName){
-    //reset the data displayed
-    results.innerText = "";
 
     //get pokemon name
+    let statEl = document.getElementById('stats');
+    let picEl = document.getElementById('picture');
+
+        //reset the data displayed
+        statEl.innerText = "";
+        picEl.innerText = "";
+
     let name = data.name
     let nameFormatted = name.charAt(0).toUpperCase() + name.slice(1);
     let nameEl = document.createElement('div');
-    nameEl.classList = 'poke-interface-render';
     nameEl.textContent = "Name: " + nameFormatted;
-   
+
+    //get height
+    let height = data.height;
+    let heightEl = document.createElement('div');
+    heightEl.textContent = "Height: " + height;
+    
     //get pokemon image
     let pokePic = data.sprites.other['official-artwork'].front_default
     let pokePicEl = document.createElement('img');
-    pokePicEl.classList = 'poke-interface-render';
+    //pokePicEl.classList = '';
     pokePicEl.setAttribute("src", pokePic)
 
 
-    results.appendChild(nameEl);
-    results.appendChild(pokePicEl);
+    statEl.appendChild(nameEl);
+    statEl.appendChild(heightEl)
+    picEl.appendChild(pokePicEl);
 
 }
 
