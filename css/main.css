@@ -79,7 +79,7 @@ table {
 }
 
 #results {
-    background-color: darkkhaki;
+    background-color: #E60012;
     display: flex;
 }
 
@@ -88,8 +88,23 @@ table {
     flex-direction: column;
 }
 
+.stats {
+    padding: 10px 25px;
+    font-size: 1.7em;
+    font-family: 'IBM Plex Sans';
+    background-color: lightgrey;
+    margin: 10px;
+    display: inline;
+
+}
+
+.inline {
+    display: inline;
+}
+
 #picture {
-  
+    -webkit-filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(10px 10px 10px #222);
 }
 
 .logo {

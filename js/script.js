@@ -50,11 +50,18 @@ let displayPokeData = function(data, pokeName){
     let name = data.name
     let nameFormatted = name.charAt(0).toUpperCase() + name.slice(1);
     let nameEl = document.createElement('div');
-    nameEl.textContent = "Name: " + nameFormatted;
+    let nameElTitle = document.createElement('h2');
+    
+    nameElTitle.classList = 'stats inline'
+    nameEl.classList = 'stats';
+
+    nameElTitle.textContent = "Name: ";
+    nameEl.textContent = nameFormatted;
 
     //get height
     let height = data.height;
     let heightEl = document.createElement('div');
+    heightEl.classList = 'stats';
     heightEl.textContent = "Height: " + height;
     
     //get pokemon image
@@ -63,7 +70,7 @@ let displayPokeData = function(data, pokeName){
     //pokePicEl.classList = '';
     pokePicEl.setAttribute("src", pokePic)
 
-
+    statEl.appendChild(nameElTitle);
     statEl.appendChild(nameEl);
     statEl.appendChild(heightEl)
     picEl.appendChild(pokePicEl);
